@@ -15,7 +15,7 @@ export default {
     };
   },
   mounted() {
-    fetch("https://localhost:3000/jobs" + this.id)
+    fetch("https://localhost:3000/jobs/" + this.id)
       .then((res) => res.json())
       .then((data) => (this.job = data))
       .catch((err) => err.message);
