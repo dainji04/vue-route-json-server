@@ -25,6 +25,7 @@ const routes = [
     path: "/jobs/:id",
     name: "jobsDetails",
     component: JobsDetails,
+    props: true, // pass through props
   },
   {
     path: "/:catchAll(.*)",
