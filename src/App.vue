@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link :to="{ name: 'about' }">About</router-link> |
-    <router-link :to="{ name: 'jobs' }">Jobs</router-link>
+    <router-link :to="{ name: 'jobs' }">Jobs</router-link> |
+    <router-link :to="{ name: 'composition' }">Composition API</router-link>
   </nav>
   <div class="options">
     <button @click="back">Back</button>

@@ -6,21 +6,36 @@
         <h4>{{ job.title }}</h4>
       </router-link>
     </div>
+
+    <table style="width: 100%">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
+import dataUser from "../data/fetchUser";
 export default {
-  data() {
-    return {
-      jobs: [],
-    };
-  },
-  mounted() {
-    fetch("http://localhost:3000/jobs")
-      .then((res) => res.json()) // return a promise
-      .then((data) => (this.jobs = data))
-      .catch((err) => console.log(err.message));
+  setup() {
+    const { fetchAll, jobs } = dataUser();
+
+    fetchAll();
+
+    return { jobs };
   },
 };
 </script>

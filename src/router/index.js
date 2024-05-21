@@ -4,6 +4,7 @@ import About from "../views/AboutView.vue";
 import Jobs from "../views/Jobs/Jobs.vue";
 import JobsDetails from "../views/Jobs/JobsDetails.vue";
 import ErrorPage from "../views/ErrorPage.vue";
+import CompositionAPI from "../views/CompositionAPI.vue";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "404-Error",
     component: ErrorPage,
+  },
+  {
+    path: "/composition-api",
+    name: "composition",
+    component: CompositionAPI,
   },
 ];
 

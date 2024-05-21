@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import dataUser from "../data/fetchUser";
 export default {
   props: ["id"],
   data() {
